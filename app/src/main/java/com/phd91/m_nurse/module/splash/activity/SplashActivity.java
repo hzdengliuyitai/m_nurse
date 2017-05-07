@@ -27,6 +27,7 @@ public class SplashActivity extends BaseBlankActivity<SplashPresenter> {
         initContentView();
         initListener();
 
+
     }
 
     private void initContentView() {
