@@ -6,8 +6,8 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import com.phd91.m_nurse.R;
 import com.phd91.m_nurse.module.splash.presenter.SplashPresenter;
@@ -15,15 +15,25 @@ import com.phd91.m_nurse.module.splash.presenter.SplashPresenter;
 import main.base.baseActivity.BaseBlankActivity;
 
 public class SplashActivity extends BaseBlankActivity<SplashPresenter> {
+    private Button mBtnUseNow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRealContentView(R.layout.activity_splash);
-        presenter.doNext();
+        initContentView();
+        initListener();
+    }
+
+    private void initContentView() {
+        mBtnUseNow = (Button) findViewById(R.id.btn_splash_use_now);
+    }
+
+    private void initListener() {
+        mBtnUseNow.setOnClickListener(presenter);
     }
 
     @Override

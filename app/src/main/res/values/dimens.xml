@@ -92,5 +92,12 @@
     <dimen name="pop_window_height">234dp</dimen>
     <dimen name="pop_window_title_margin_top_bottom">27.5dp</dimen>
 
+    <!--引导页-->
+    <dimen name="splash_button_margin_bottom">100dp</dimen>
+
+    <!--首页-->
+    <dimen name="drawer_open_height_width">40dp</dimen>
+    <dimen name="scan_main_height_width">30dp</dimen>
+    <dimen name="action_bar_padding_bottom">5dp</dimen>
 
 </resources>

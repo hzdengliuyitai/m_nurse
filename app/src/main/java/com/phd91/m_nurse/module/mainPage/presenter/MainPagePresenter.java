@@ -2,7 +2,7 @@ package com.phd91.m_nurse.module.mainPage.presenter;
 
 import android.view.View;
 
-import com.phd91.m_nurse.R;
+
 import com.phd91.m_nurse.module.mainPage.activity.MainPageActivity;
 import com.tsy.sdk.myokhttp.MyOkHttp;
 import com.tsy.sdk.myokhttp.response.RawResponseHandler;
@@ -52,12 +52,7 @@ public class MainPagePresenter extends BaseActivityPresenter<MainPageActivity> i
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_web_test:
-                test();
-                break;
-            case R.id.btn_web_test2:
-                test2();
-                break;
+
 
         }
     }

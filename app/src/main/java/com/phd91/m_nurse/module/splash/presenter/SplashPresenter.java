@@ -1,7 +1,9 @@
 package com.phd91.m_nurse.module.splash.presenter;
 
-import android.os.Handler;
+import android.view.View;
 
+import com.phd91.m_nurse.R;
+import com.phd91.m_nurse.module.mainPage.activity.MainPageActivity;
 import com.phd91.m_nurse.module.splash.activity.SplashActivity;
 
 import main.base.basePresenter.BaseActivityPresenter;
@@ -10,7 +12,7 @@ import main.base.basePresenter.BaseActivityPresenter;
  * Created by Administrator on 2017/5/6.
  */
 
-public class SplashPresenter extends BaseActivityPresenter<SplashActivity> {
+public class SplashPresenter extends BaseActivityPresenter<SplashActivity> implements View.OnClickListener {
     private static final int WAIT_TIME = 3000;
     private volatile boolean isFinished = false;
 
@@ -20,41 +22,13 @@ public class SplashPresenter extends BaseActivityPresenter<SplashActivity> {
         super(target);
     }
 
-    public void doNext() {
-        mStartTime = System.currentTimeMillis();
-        long endTime = System.currentTimeMillis();
-        long initTime = endTime - mStartTime;
-        long delayMillis;
 
-        if (initTime < 0) {
-            delayMillis = WAIT_TIME;
-        } else if (initTime >= WAIT_TIME) {
-            delayMillis = 0;
-        } else {
-            delayMillis = WAIT_TIME - initTime;
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_splash_use_now:
+                MainPageActivity.start(target);
+                break;
         }
-
-        // x秒后强行关闭
-        doDelay(new Runnable() {
-            @Override
-            public void run() {
-                if (!isFinished) {
-                    isFinished = !isFinished;
-
-//                    if (SharedpreferenceUtil.getLoginState(target, AppProfile.LOGIN_STATE)) {
-////                        MainActivity.start(target);
-//                    } else LoginMainActivity.start(target);
-////                    LoginMainActivity.start(target);
-                    target.finish();
-                    //stop的时候默认会取消掉的
-//                    cancelRequests();
-                }
-            }
-        }, delayMillis);
-    }
-
-    public static void doDelay(Runnable runable, long delayMillis) {
-        Handler handler = new Handler();
-        handler.postDelayed(runable, delayMillis);
     }
 }
