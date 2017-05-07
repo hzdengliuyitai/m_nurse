@@ -26,12 +26,6 @@ public class SplashActivity extends BaseBlankActivity<SplashPresenter> {
         setRealContentView(R.layout.activity_splash);
         initContentView();
         initListener();
-
-
-
-
-
-
     }
 
     private void initContentView() {
