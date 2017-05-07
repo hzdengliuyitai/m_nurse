@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/nav_background"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/navigation_left_margin"
+        android:paddingRight="@dimen/navigation_right_margin">
+
+        <FrameLayout
+            android:id="@+id/nav_left_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:minHeight="40dp"
+            android:minWidth="50dp">
+
+            <ImageView
+                android:id="@+id/nav_left_img"
+                android:layout_width="@dimen/default_tool_bar_icon_size"
+                android:layout_height="@dimen/default_tool_bar_icon_size"
+                android:layout_gravity="left|center_vertical"/>
+
+            <TextView
+                android:id="@+id/nav_left_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:textColor="@color/phy_text_color"
+                android:textSize="15sp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_right_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minHeight="40dp"
+            android:minWidth="50dp">
+
+            <ImageView
+                android:id="@+id/nav_right_img"
+                android:layout_width="@dimen/default_tool_bar_icon_size"
+                android:layout_height="@dimen/default_tool_bar_icon_size"
+                android:layout_gravity="right|center_vertical"/>
+
+            <TextView
+                android:id="@+id/nav_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="@color/phy_text_color"
+                android:textSize="15sp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/nav_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/black_424659"
+                android:textSize="@dimen/default_tool_bar_title_size"/>
+
+            <FrameLayout
+                android:id="@+id/nav_titleView_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+            </FrameLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/nav_sep_line"
+        android:layout_width="match_parent"
+        android:layout_height="4px"
+        android:background="@drawable/ic_launcher"
+        android:visibility="visible"/>
+</LinearLayout>

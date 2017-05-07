@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pop_window_height"
+        android:layout_marginLeft="@dimen/default_content_padding"
+        android:layout_marginRight="@dimen/default_content_padding"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_report_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pop_window_title_margin_top_bottom"
+            android:gravity="center"
+            android:textColor="@color/black_424659"
+            android:textSize="@dimen/text_size_l"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_alert_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/action_bar_height"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@color/black_alpha80"-->
+        <!--android:textSize="@dimen/text_size_l"-->
+        <!--android:textStyle="bold"/>-->
+        <!--android:visibility="gone"-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/edt_alert_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="@dimen/alert_dialog_content_top_bottom"-->
+        <!--android:paddingLeft="@dimen/alert_dialog_content_padding"-->
+        <!--android:paddingRight="@dimen/alert_dialog_content_padding"-->
+        <!--android:paddingTop="@dimen/alert_dialog_content_top_bottom"-->
+        <!--android:textColor="@color/black_alpha80"-->
+        <!--android:textSize="@dimen/text_size_m"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/dialog_report_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/pop_window_title_margin_top_bottom"
+                android:layout_marginLeft="@dimen/default_content_padding"
+                android:layout_marginRight="@dimen/default_content_padding"
+                android:textColor="@color/black_424659_alpha60"
+                android:textSize="@dimen/text_size_m"/>
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_menses_days_amount"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/black_424659_alpha60"-->
+            <!--android:textSize="@dimen/text_size_l"/>-->
+        </LinearLayout>
+
+        <include layout="@layout/view_horizontal_line_1px_black_alpha8"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_alert_negative"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="@dimen/default_btn_height"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/selector_btn_white"-->
+                <!--android:textColor="@color/black_424659"-->
+                <!--android:textSize="@dimen/text_size_l"/>-->
+
+            <!--<View
+                android:id="@+id/line"
+                android:layout_width="@dimen/border_width_1px"
+                android:layout_height="@dimen/alert_dialog_btn_height"
+                android:background="@color/black_alpha15"/>-->
+
+            <Button
+                android:id="@+id/btn_alert_positive"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/default_btn_height"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_black"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_l"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
