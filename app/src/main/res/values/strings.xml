@@ -6,7 +6,17 @@
 
     <!--引导页-->
     <string name="splash_button">立即使用</string>
+
+
+    <!--首页-->
     <string name="main_page_scan">扫一扫</string>
+    <string name="main_page_edit_hint">搜索病人</string>
+    <string name="main_patient_list">病人列表</string>
+    <string name="main_data_entering">检测数据录入</string>
+    <string name="main_advice_execute">医嘱执行</string>
+    <string name="main_transfusion_manage">输液管理</string>
+    <string name="main_pharmacy_execute">用药执行</string>
+    <string name="main_remind">提醒</string>
 
 
 </resources>

@@ -7,7 +7,7 @@ import android.content.Context;
  * Created by ht-template
  **/
 public abstract class AppProfile {
-    public static final String AppName = "ClothesHelperApplication";
+    public static final String AppName = "MyNurse";
 
     public static final String USER_NAME = "UserName";
     public static final String USER_ID = "UserId";
